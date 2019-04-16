@@ -1,0 +1,41 @@
+.margin-top-20{
+	margin-top: 20px;
+}
+.backgound{
+	background-color:  #e6e6e6;
+}
+.fetured-img{
+	height:150px;
+}
+.footer{
+	padding: 20px;
+	margin-top: 20px;
+	background-color: #1176e7;
+}
+.bg-light{
+	background-color: #1176e7 !important;
+}
+.search{
+	padding-top:20px;
+	margin-right: 25px;
+}
+.a{
+	color:white;
+}
+.icon{
+	background: #ead1d1;
+}
+.child-rows{
+	
+	border-left: 1px solid #dfdfdf;
+	background: #FFF;
+}
+.child-rows a.list-group-item{
+	border-left: 0px!important;
+	padding-left: 50px;
+}
+
+.nav navbar-nav navbar-right {
+	color: white;
+	font-size: 20em;
+}
