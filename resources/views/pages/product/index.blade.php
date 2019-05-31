@@ -6,32 +6,31 @@
   <div class="container margin-top-20">
     
       <div class="row">
-          <div class="col-md-3">
-           <div class="list-group border border-info">
-            @include ('partials.psidebar')
-          </div>
-        </div>
-        <div class="col-md-9">
+         
+        <div class="col-md-12">
           <div class="widget">
             <h3>All Product</h3>
             <div class="row">
             @foreach ($products as $product)
-              <div class="col-md-3">
+              <div class="col-md-4">
                   <div class="card" >
+                     <a href="{!! route('product.show', $product->slug) !!}">
                     @php
                       $i=1;
                     @endphp
                       @foreach ($product->images as $image)
                         @if ($i>0)
                       
-                        <img class="card-img-top fetured-img" src="{{asset('images/product/'.$image->image)}}" alt="Card image" height="42" width="42">
+                        <img class="fetured-img" src="{{asset('images/product/'.$image->image)}}" alt="Card image" height="42" width="42">
                       @endif
                         @php  $i--  @endphp
                       @endforeach
                     <div class="card-body">
-                      <a href="{!! route('product.show', $product->slug) !!}"><h4 class="card-title">{{$product->title}}</h4></a>
-                      <p class="card-text">Price-{{$product->price}}</p>
-                      <a href="#" class="btn btn-outline-success" style="color: ;">Add to cart</a>
+                     <h4 class="card-title">ROSEOIL</h4>
+                      <h5>Evening Primrose Oil 1000mg</h5>
+                      <p class="card-text">Enrich With Unsaturated Essential Fatty Acid Omega-6</p>
+                     
+                     </a>
                     </div>
                 </div>
               </div>

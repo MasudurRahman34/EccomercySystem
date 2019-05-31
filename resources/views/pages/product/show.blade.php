@@ -12,10 +12,11 @@
     <div class="col-md-4">
     	 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
 			  <div class="carousel-inner ">
+			  	@php	$i=0; @endphp
 			  	@foreach ($product->images as $image)
-			  		@php	$i=0; @endphp
-			    <div class="icon carousel-item {{$i==0?'active': ''}} ">
-			      <img class="d-block w-100" src="{{ asset('images/product/'.$image->image) }}" alt="First slide">
+			  		
+			    <div class="carousel-item {{$i==0 ? 'active':''}} " style="height: 300px">
+			      <img class="d-block w-100" src="{{ asset('images/product/'.$image->image) }}" alt="First slide" style="width:100%;" height="300px;">
 			    </div>
 			    @php $i++ @endphp
 			    @endforeach
@@ -27,7 +28,7 @@
 			  </a>
 			  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
 			    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-			    <span class="sr-only">Next</span>
+			    <span class="sr-only" style="color: red;">Next</span>
 			  </a>
 			</div>
        
@@ -46,6 +47,7 @@
       	{{$product->description}}
       </div>
       </div>
+      <div class="col-md-12"> fuck me test case</div>
     </div>
   </div>
 </div>
