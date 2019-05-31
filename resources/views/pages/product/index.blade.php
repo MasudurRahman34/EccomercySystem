@@ -26,9 +26,8 @@
                         @php  $i--  @endphp
                       @endforeach
                     <div class="card-body">
-                     <h4 class="card-title">ROSEOIL</h4>
-                      <h5>Evening Primrose Oil 1000mg</h5>
-                      <p class="card-text">Enrich With Unsaturated Essential Fatty Acid Omega-6</p>
+                     <h4 class="card-title">{{$product->name}}</h4>
+                      <h5>{{$product->title}}</h5>
                      
                      </a>
                     </div>

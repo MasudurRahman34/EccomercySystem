@@ -2,17 +2,23 @@
 
 @section('content')
 
+
 <div class="main-panel">
        <div class="content-wrapper">
+
          <div class="card">
           <div class="card-header">
             Add Product
             <div class="card-body">
              <form action="{{ route('admin.product.store') }}" method="post" enctype="multipart/form-data">
                 {{ csrf_field() }}
+                <div class="form-group">
+                  <label for="exampleFormControlInput1">Product Name</label>
+                  <input type="text" name="name" class="form-control"  placeholder="Product Name">
+                </div>
                 
                 <div class="form-group">
-                  <label for="exampleFormControlInput1">Title</label>
+                  <label for="exampleFormControlInput1">Product Title</label>
                   <input type="text" name="title" class="form-control"  placeholder="Title">
                 </div>
                  <div class="form-group">
@@ -56,7 +62,8 @@
                   </select>
                 </div> --}}
                
-                <button type="submit" class="btn btn-success btn-lg">Add Product</button>
+                <button type="submit" class="btn btn-success btn-lg" style="margin:10px;">Add Product</button>
+
                 
             
                 </form>

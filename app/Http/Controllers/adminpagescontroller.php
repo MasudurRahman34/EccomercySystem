@@ -35,6 +35,7 @@ class adminpagescontroller extends Controller
     {
            $product=new product;
                 $product->title= $request->title;
+                $product->name= $request->name;
                 $product->description= $request->description;
                 $product->quantity= $request->quantity;
                 $product->price= $request->price;
@@ -57,7 +58,7 @@ class adminpagescontroller extends Controller
                 $productImage->Save();
                 }
             } 
-            return redirect()->route('admin.product.create');
+            return redirect()->route('admin.product.manage');
             //single image insert
             /*if ($request->hasFile('image')){
                $image= $request->file('image');
@@ -77,17 +78,14 @@ class adminpagescontroller extends Controller
     public function product_update(Request $request, $id)
     {
 	       $product=product::find($id);
+                $product->name= $request->name;
             	$product->title= $request->title;
             	$product->description= $request->description;
             	$product->quantity= $request->quantity;
             	$product->price= $request->price;
-            	/*$product->slug= str_slug($product->title);
-            	$product->category_id=1;
-            	$product->brand_id= 1;
-            	$product->admin_id= 1;*/
                 $product->Save();
-                //multiple image insert
-                 /*if(count($request->image)>0){
+
+           if(count($request->image)>0){
                 foreach($request->image as $image){
                 //$image= $request->file('image');
                 $img=time().'.'.$image->getClientOriginalExtension();
@@ -99,20 +97,17 @@ class adminpagescontroller extends Controller
                 $productImage->image=$img;
                 $productImage->Save();
                 }
-            } */
+            }
+            
+               
             return redirect()->route('admin.product.manage');
-            //single image insert
-            /*if ($request->hasFile('image')){
-               $image= $request->file('image');
-               $img=time().'.'.$image->getClientOriginalExtension();
-                $location= public_path('images/product/'.$img);
-                Image::make($image)->save($location);
+  
+    }
 
-                $productImage= new productImage;
-                $productImage->product_id= $product->id;
-                $productImage->image=$img;
-                $productImage->Save();
-
-    }*/  
+    public function productDestroy($id)
+    {
+        $product=product::find($id);
+        $product->delete();
+        return redirect()->route('admin.product.manage');
     }
 }

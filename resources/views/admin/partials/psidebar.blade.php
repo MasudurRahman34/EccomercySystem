@@ -7,14 +7,14 @@
                   <img src="{{ asset('images/faces/face1.jpg') }}" alt="profile image">
                 </div>
                 <div class="text-wrapper">
-                  <p class="profile-name">Richard V.Welsh</p>
+                  <p class="profile-name">Kawsar Hossain</p>
                   <div>
-                    <small class="designation text-muted">Manager</small>
+                    <small class="designation text-muted">Owner</small>
                     <span class="status-indicator online"></span>
                   </div>
                 </div>
               </div>
-              <button class="btn btn-success btn-block">New Project
+              <button class="btn btn-success btn-block">Nirban Trading
                 <i class="mdi mdi-plus"></i>
               </button>
             </div>
@@ -43,22 +43,22 @@
               </ul>
             </div>
           </li> 
-          <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-              <i class="menu-icon mdi mdi-content-copy"></i>
-              <span class="menu-title">Manage Catagory</span>
-              <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="ui-basic">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item">
-                  <a class="nav-link" href="{{ route('admin.category.manage') }}">Category List</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="{{ route('admin.category.create') }}">Add Catagory</a>
-                </li>
-              </ul>
-            </div>
-          </li>
+         <!--  <li class="nav-item">
+           <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+             <i class="menu-icon mdi mdi-content-copy"></i>
+             <span class="menu-title">Manage Catagory</span>
+             <i class="menu-arrow"></i>
+           </a>
+           <div class="collapse" id="ui-basic">
+             <ul class="nav flex-column sub-menu">
+               <li class="nav-item">
+                 <a class="nav-link" href="{{ route('admin.category.manage') }}">Category List</a>
+               </li>
+               <li class="nav-item">
+                 <a class="nav-link" href="{{ route('admin.category.create') }}">Add Catagory</a>
+               </li>
+             </ul>
+           </div>
+         </li> -->
         </ul>
       </nav>

@@ -2,7 +2,7 @@
 @extends('layouts.master')
 @section('tilte')
 
-	{{$product->title}} | ecomerce site
+	{{$product->title}}
 @endsection
 <!-- sidebar -->
 @section('content') 
@@ -47,7 +47,7 @@
       	{{$product->description}}
       </div>
       </div>
-      <div class="col-md-12"> fuck me test case</div>
+      <div class="col-md-12"> </div>
     </div>
   </div>
 </div>

@@ -10,6 +10,10 @@
             <div class="card-body">
              <form action="{{ route('admin.product.update', $product->id) }}" method="post" enctype="multipart/form-data">
                 {{ csrf_field() }}
+                <div class="form-group">
+                  <label for="exampleFormControlInput1">Name</label>
+                  <input type="text" name="name" class="form-control" value="{{$product->name}}">
+                </div>
                 
                 <div class="form-group">
                   <label for="exampleFormControlInput1">Title</label>

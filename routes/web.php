@@ -14,8 +14,8 @@
 /*Route::get('/', function () {
     return view('welcome');
 });*/
-Route::get('/', 'pagescontroller@index')->name('home');
-Route::get('/product', 'pagescontroller@product')->name('products');
+//Route::get('/', 'pagescontroller@index')->name('home');
+Route::get('/', 'pagescontroller@product')->name('products');
 Route::get('/product/{slug}', 'pagescontroller@show')->name('product.show');
 
 Route::get('/search', 'pagescontroller@search')->name('product.search');
@@ -33,6 +33,7 @@ Route::group(['prefix'=>'admin'], function () {
 	    Route::get('/manage', 'adminpagescontroller@product_manage')->name('admin.product.manage');
 
 	    Route::get('/edit/{id}', 'adminpagescontroller@product_edit')->name('admin.product.edit');
+	    Route::post('/delete/{id}', 'adminpagescontroller@productDestroy')->name('admin.product.delete');
 
 	    Route::post('/edit/{id}', 'adminpagescontroller@product_update')->name('admin.product.update');
 	    Route::post('/create', 'adminpagescontroller@product_store')->name('admin.product.store');
